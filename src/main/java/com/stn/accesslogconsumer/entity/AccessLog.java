@@ -41,14 +41,11 @@ public class AccessLog implements Serializable {
     @JsonIgnore
     private Date createdDate;
 
-    public AccessLog() {
+    @Column(name = "user_id")
+    @JsonProperty("userId")
+    private Long userId;
 
-    }
-
-    public AccessLog(String IPAddress, String URI, RequestMethod requestMethod, String requestBody) {
-        this.IPAddress = IPAddress;
-        this.URI = URI;
-        this.requestMethod = requestMethod;
-        this.requestBody = requestBody;
-    }
+    @Column(name = "asset_file_id")
+    @JsonProperty("assetFileId")
+    private Long assetFileId;
 }
