@@ -44,8 +44,4 @@ public class AccessLog implements Serializable {
     @Column(name = "user_id")
     @JsonProperty("userId")
     private Long userId;
-
-    @Column(name = "asset_file_id")
-    @JsonProperty("assetFileId")
-    private Long assetFileId;
 }
